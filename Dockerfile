@@ -7,7 +7,7 @@ HEALTHCHECK --interval=30s --retries=3 \
 
 WORKDIR /home/node/app
 
-COPY package.json package-lock.json .
+COPY package.json package-lock.json ./
 
 RUN npm install \
     && npm cache clean --force  
