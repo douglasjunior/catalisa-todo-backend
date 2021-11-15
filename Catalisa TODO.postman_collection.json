@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "74cbfb82-0a99-46c6-94e5-f9af50ec5ec0",
+		"_postman_id": "d51b72dd-e2c3-45c1-b2c3-40caafe56d90",
 		"name": "Catalisa TODO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"nome\": \"Edvaldo Szymonek\",\n  \"email\": \"edvaldoszy@gmail.com\",\n  \"senha\": \"123456\"\n}",
+					"raw": "{\n  \"nome\": \"Douglas Junior\",\n  \"email\": \"douglas@smarppy.com\",\n  \"senha\": \"123456\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,12 +20,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/usuarios",
-					"protocol": "http",
+					"raw": "https://catalisa-todo-backend.lab.smarppy.com/usuarios",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"catalisa-todo-backend",
+						"lab",
+						"smarppy",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"usuarios"
 					]
@@ -40,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"edvaldoszy@gmail.com\",\n  \"senha\": \"123456\"\n}",
+					"raw": "{\n  \"email\": \"douglas@smarppy.com\",\n  \"senha\": \"123456\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -48,12 +50,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/usuarios/login",
-					"protocol": "http",
+					"raw": "https://catalisa-todo-backend.lab.smarppy.com/usuarios/login",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"catalisa-todo-backend",
+						"lab",
+						"smarppy",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"usuarios",
 						"login"
@@ -69,13 +73,13 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJlZHZhbGRvc3p5QGdtYWlsLmNvbSIsImlhdCI6MTYzNTg4OTExM30.noHaqQXFVEdg_z4qiJSgzSuYuybw6BBQWxi1gB3NtK4",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkb3VnbGFzQHNtYXJwcHkuY29tIiwiaWF0IjoxNjM3MDA4Nzk2fQ.ccyclH7C4hlyZFnAq3ErpZEChwqCa9AoBc2-pJLLH7g",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"titulo\": \"Lavar o carro\",\n  \"concluida\": true\n}",
+					"raw": "{\n  \"titulo\": \"Lavar o carro\",\n  \"concluida\": false\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -83,12 +87,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tarefas",
-					"protocol": "http",
+					"raw": "https://catalisa-todo-backend.lab.smarppy.com/tarefas",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"catalisa-todo-backend",
+						"lab",
+						"smarppy",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"tarefas"
 					]
@@ -106,7 +112,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJlZHZhbGRvc3p5QGdtYWlsLmNvbSIsImlhdCI6MTYzNTc5MTQzNH0.k8TaHqU1RO_EHneOrbAXnuYvHMVix1CCrS-nGKTuc58",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkb3VnbGFzQHNtYXJwcHkuY29tIiwiaWF0IjoxNjM3MDA4Nzk2fQ.ccyclH7C4hlyZFnAq3ErpZEChwqCa9AoBc2-pJLLH7g",
 						"type": "text"
 					}
 				],
@@ -120,12 +126,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tarefas",
-					"protocol": "http",
+					"raw": "https://catalisa-todo-backend.lab.smarppy.com/tarefas",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"catalisa-todo-backend",
+						"lab",
+						"smarppy",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"tarefas"
 					]
@@ -140,7 +148,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJlZHZhbGRvc3p5QGdtYWlsLmNvbSIsImlhdCI6MTYzNTc5MTQzNH0.k8TaHqU1RO_EHneOrbAXnuYvHMVix1CCrS-nGKTuc58",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkb3VnbGFzQHNtYXJwcHkuY29tIiwiaWF0IjoxNjM3MDA4Nzk2fQ.ccyclH7C4hlyZFnAq3ErpZEChwqCa9AoBc2-pJLLH7g",
 						"type": "text"
 					}
 				],
@@ -154,15 +162,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tarefas/2",
-					"protocol": "http",
+					"raw": "https://catalisa-todo-backend.lab.smarppy.com/tarefas/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"catalisa-todo-backend",
+						"lab",
+						"smarppy",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"tarefas",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -175,17 +185,19 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJlZHZhbGRvc3p5QGdtYWlsLmNvbSIsImlhdCI6MTYzNTg4OTE3NX0.TvzpT9S7PHCW8QKN3iRVBQwN1MVBgT_ay2giI8yXl0g",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkb3VnbGFzQHNtYXJwcHkuY29tIiwiaWF0IjoxNjM3MDA4Nzk2fQ.ccyclH7C4hlyZFnAq3ErpZEChwqCa9AoBc2-pJLLH7g",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/tarefas/1/conclusao",
-					"protocol": "http",
+					"raw": "https://catalisa-todo-backend.lab.smarppy.com/tarefas/1/conclusao",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"catalisa-todo-backend",
+						"lab",
+						"smarppy",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"tarefas",
 						"1",
@@ -202,7 +214,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJlZHZhbGRvc3p5QGdtYWlsLmNvbSIsImlhdCI6MTYzNTc5MTQzNH0.k8TaHqU1RO_EHneOrbAXnuYvHMVix1CCrS-nGKTuc58",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkb3VnbGFzQHNtYXJwcHkuY29tIiwiaWF0IjoxNjM3MDA4Nzk2fQ.ccyclH7C4hlyZFnAq3ErpZEChwqCa9AoBc2-pJLLH7g",
 						"type": "text"
 					}
 				],
@@ -216,15 +228,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tarefas/2",
-					"protocol": "http",
+					"raw": "https://catalisa-todo-backend.lab.smarppy.com/tarefas/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"catalisa-todo-backend",
+						"lab",
+						"smarppy",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"tarefas",
-						"2"
+						"1"
 					]
 				}
 			},
