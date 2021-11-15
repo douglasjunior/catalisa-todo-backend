@@ -5,7 +5,7 @@ const knex = createKnex({
   debug: true,
   useNullAsDefault: true,
   connection: {
-    filename: './catalisa-todo.sqlite3',
+    filename: './database/catalisa-todo.sqlite3',
   }
 });
 const bookshelf = require('bookshelf')(knex);
@@ -23,5 +23,6 @@ const Tarefa = bookshelf.model('Tarefa', {
   requireFetch: false,
 });
 
+exports.knex = knex;
 exports.Usuario = Usuario;
 exports.Tarefa = Tarefa;

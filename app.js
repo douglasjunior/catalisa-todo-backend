@@ -14,6 +14,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/healthcheck', (req, res, next) => {
+    res.status(200).send();
+});
+
 app.use('/tarefas', indexRouter);
 app.use('/usuarios', usersRouter);
 
