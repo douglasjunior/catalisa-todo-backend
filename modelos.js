@@ -34,7 +34,7 @@ exports.connectDatabase = async () => {
   `);
   await knex.raw(`
     CREATE TABLE IF NOT EXISTS tarefas (
-      id           INTEGER        PRIMARY KEY autoincrement NOT NULL,
+      id           INTEGER        PRIMARY KEY AUTOINCREMENT NOT NULL,
       titulo       VARCHAR (300)  NOT NULL,
       data_criacao DATETIME       NOT NULL,
       concluida    BOOLEAN        NOT NULL,
