@@ -25,7 +25,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-modelos.knex.raw('SELECT 1+1 as result')
+modelos.connectDatabase()
   .then(() => {
     server.listen(port);
     server.on('error', onError);
