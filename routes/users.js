@@ -48,7 +48,7 @@ router.post('/', validacaoCadastro, async function (req, res, next) {
 
 function validaLogin(req, res, next) {
   const schema = Joi.object({
-    email: Joi.string().min(1).max(200).required(),
+    email: Joi.string().email({ tlds: { allow: false } }).required(),
     senha: Joi.string().min(6).max(80).required(),
   });
   const resultado = schema.validate(req.body);
@@ -73,12 +73,12 @@ router.post('/login', validaLogin, async function (req, res) {
         usuario: usuarioExistente,
       });
     } else {
-      res.status(400).json({
+      res.status(401).json({
         mensagem: 'As credenciais são inválidas',
       });
     }
   } else {
-    res.status(400).json({
+    res.status(401).json({
       mensagem: 'As credenciais são inválidas',
     });
   }
