@@ -4,7 +4,7 @@ const modelos = require('../modelos');
 const autenticacao = require('../helpers/autenticacao');
 const Joi = require('joi');
 
-router.get('/', autenticacao, async function(req, res, next) {
+router.get('/', autenticacao, async function (req, res, next) {
   // SELECT * FROM terefas WHERE usuario_id = ?
   const retorno = await modelos.Tarefa
     .where('usuario_id', '=', req.usuario.get('id'))
@@ -45,7 +45,7 @@ router.put('/:id', validacaoAlteracao, autenticacao, async function (req, res, n
   res.json(retorno);
 });
 
-router.put('/:id/conclusao' , autenticacao, async function (req, res, next) {
+router.put('/:id/conclusao', autenticacao, async function (req, res, next) {
   const tarefaExistente = await modelos.Tarefa
     .where('id', '=', req.params.id)
     .where('usuario_id', '=', req.usuario.get('id'))
@@ -98,7 +98,7 @@ function validacaoCadastro(req, res, next) {
   }
 }
 
-router.post('/', validacaoCadastro, autenticacao, async function(req, res, next) {
+router.post('/', validacaoCadastro, autenticacao, async function (req, res, next) {
   const tarefa = new modelos.Tarefa({
     titulo: req.body.titulo,
     concluida: req.body.concluida,

@@ -6,7 +6,7 @@ const criptografia = require('../helpers/criptografia');
 const jwt = require('../helpers/jwt');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.send('respond with a resource');
 });
 
@@ -24,7 +24,7 @@ function validacaoCadastro(request, response, next) {
   }
 }
 
-router.post('/', validacaoCadastro, async function(req, res, next) {
+router.post('/', validacaoCadastro, async function (req, res, next) {
   // SELECT * FROM usuarios WHERE email = 'edvaldoszy@gmail.com'
   const usuarioExistente = await modelos.Usuario
     .where('email', '=', req.body.email)
@@ -35,7 +35,7 @@ router.post('/', validacaoCadastro, async function(req, res, next) {
     });
     return;
   }
-  
+
   const usuario = new modelos.Usuario({
     nome: req.body.nome,
     email: req.body.email,
@@ -63,7 +63,7 @@ router.post('/login', validaLogin, async function (req, res) {
   const usuarioExistente = await modelos.Usuario
     .where('email', '=', req.body.email)
     .fetch();
-  
+
   if (usuarioExistente) {
     const senhaEstaCorreta = criptografia.comparaHash(req.body.senha, usuarioExistente.get('senha'))
     if (senhaEstaCorreta) {
