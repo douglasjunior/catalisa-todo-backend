@@ -7,7 +7,7 @@ function geraToken(usuario) {
     email: usuario.get('email'),
   };
 
-  return jwt.sign(payload, secret);
+  return jwt.sign(payload, secret, { expiresIn: '7d' });
 }
 
 function validaToken(token) {
