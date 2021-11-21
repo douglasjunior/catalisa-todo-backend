@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
 function validacaoCadastro(request, response, next) {
   const schema = Joi.object({
     nome: Joi.string().min(1).max(200).required(),
-    email: Joi.string().min(1).max(200).required(),
+    email: Joi.string().email({ tlds: { allow: false } }).max(200).required(),
     senha: Joi.string().min(6).max(80).required(),
   });
   const resultado = schema.validate(request.body);
@@ -48,7 +48,7 @@ router.post('/', validacaoCadastro, async function (req, res, next) {
 
 function validaLogin(req, res, next) {
   const schema = Joi.object({
-    email: Joi.string().email({ tlds: { allow: false } }).required(),
+    email: Joi.string().email({ tlds: { allow: false } }).max(200).required(),
     senha: Joi.string().min(6).max(80).required(),
   });
   const resultado = schema.validate(req.body);
