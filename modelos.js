@@ -23,7 +23,7 @@ console.log({
   DEBUG
 })
 
-oracledb.initOracleClient({ libDir: 'C:\\Users\\dougl\\Downloads\\instantclient-basic-windows.x64-21.3.0.0.0\\instantclient_21_3' });
+// oracledb.initOracleClient({ libDir: 'C:\\Users\\dougl\\Downloads\\instantclient-basic-windows.x64-21.3.0.0.0\\instantclient_21_3' });
 
 const knex = createKnex({
   client: 'oracledb',
